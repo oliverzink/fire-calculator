@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>FIRE Calculator</title>
+</head>
+<body>
+    <div class="labels">
+        <p id="headingLabel1">Welcome to the F.I.R.E. Calculator</p>
+        <p id="headingLabel2">(Financial Independence/Retire Early)</p>
+        <p id="headingLabel3">Use the sliders below to enter your information</p>
+        <p id="headingLabel4">The program will estimate when you can retire</p>
+        <p id="compoundRate"></p>
+        <p id="yearsTillRetire"></p>
+        <p id="monthsTillRetire"></p>
+        <p id="monthlyExpenses"></p>
+        <p id="ageLabel">What is your age?</p>
+        <p id="returnLabel">What is your expected yearly rate of return? (7% is standard)</p>
+        <p id="investedLabel">Approximately how much do you currently have saved/invested?</p>
+        <p id="incomeLabel">What is your post-tax yearly income?</p>
+        <p id="raiseLabel">What yearly raise do you expect to receive? (standard raise is 3%)</p>
+        <p id="percentLabel">What percent of post-tax income do you save?</p>
+        <p id="spendLabel">How much do you expect to spend each year once you retire?</p>
+        <p id="withdrawLabel">What rate do you want to withdraw once retired? (4% recommended)</p>
+        <p id="totalLabel1"></p>
+        <p id="totalLabel2"></p>
+        <p id="totalLabel3"></p>
+        <p id="lumpSum"></p>
+        <p id="timeRetire1"></p>
+        <p id="timeRetire2"></p>
+        <p id="timeRetire3"></p>
+        <p id="whenAge"></p>
+        <p id="retireAge"></p>
+        <p id="retireNow"></p>
+        <p id="settingsNote"></p>
+        <p id="suggestions"></p>
+        <p id="suggestion1"></p>
+        <p id="suggestion2"></p>
+        <p id="suggestion3"></p>
+        <p id="suggestion4"></p>
+        <p id="demonstration"></p>
 
+
+
+
+
+
+    </div>
+        <div id="square1">
+            <img/>
+        </div>
+        <div id="square2">
+            <img/>
+        </div>
+        <input type="range" min="10" max="110" value="10" class="slider" id="age" oninput="this.nextElementSibling.value = this.value">
+        <output class="rangeVals" id="out1">10</output>
+        <input type="range" min="1" max="15" value="1" class="slider" id="return" oninput="this.nextElementSibling.value = this.value + '%'">
+        <output class="rangeVals" id="out2">1%</output>
+        <input type="range" min="1000" max="6000000" value="1000" step="1000" class="slider" id="invested" oninput="this.nextElementSibling.value = '$' + numberWithCommas(this.value)">
+        <output class="rangeVals" id="out3">$1,000</output>
+        <input type="range" min="1000" max="2000000" value="1000" step="1000" class="slider" id="yearly_income" oninput="this.nextElementSibling.value = '$' + numberWithCommas(this.value)">
+        <output class="rangeVals" id="out4">$1,000</output>
+        <input type="range" min="0" max="100" value="0" class="slider" id="raise" oninput="this.nextElementSibling.value = this.value + '%'">
+        <output class="rangeVals" id="out5">0%</output>
+        <input type="range" min="1" max="100" value="1" class="slider" id="percent_saved" oninput="this.nextElementSibling.value = this.value + '%'">
+        <output class="rangeVals" id="out6">1%</output>
+        <input type="range" min="1000" max="1000000" value="1000" step="1000" class="slider" id="spend" oninput="this.nextElementSibling.value = '$' + numberWithCommas(this.value)">
+        <output class="rangeVals" id="out7">$1,000</output>
+        <input type="range" min="0" max="7" value="0" class="slider" id="withdraw_rate" oninput="this.nextElementSibling.value = this.value + '%'">
+        <output class="rangeVals" id="out8">0%</output>
+
+     <script src="index.js"></script>
+
+</body>
+</html>
