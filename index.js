@@ -1,11 +1,10 @@
-
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 
 function updateSliders(){
-    const sliderVals = [document.getElementById("age").value, document.getElementById("return").value, document.getElementById("invested").value, document.getElementById("yearly_income").value, document.getElementById("raise").value, document.getElementById("percent_saved").value, document.getElementById("spend").value, document.getElementById("withdraw_rate").value];
+    const sliderVals = [document.getElementById("age").value, document.getElementById("return").value, document.getElementById("invested").value, document.getElementById("yearly_income").value, 1, document.getElementById("percent_saved").value, document.getElementById("spend").value, document.getElementById("withdraw_rate").value];
     // const age = document.getElementById("age");
     // const sliderVals = [age.value];
     return sliderVals;
@@ -29,15 +28,32 @@ function updateValues(sliderVals){
     let retireAge = parseInt(sliderVals[0]) + roundedYears;
   
     let demonstration = 100 * (Math.pow(1+R, n*roundedYears));
+    let percentThere = (initialInvestment/lumpSum) * 100;
 
 
     if(withdraw_rate > 0){
         document.getElementById("totalLabel1").innerHTML = "You need $";
         document.getElementById("totalLabel2").innerHTML = "to be financially independent";
-        document.getElementById("totalLabel3").innerHTML = "Once you achieve this number, your money will work for you!";
+        document.getElementById("totalLabel2-1").innerHTML = "You are ";
+        if (percentThere > 100){
+            document.getElementById("totalLabel2-3").innerHTML = "100%";
+        }
+        else{
+            document.getElementById("totalLabel2-3").innerHTML = Math.round(percentThere) + "%";
+        }
+        document.getElementById("totalLabel2-2").innerHTML = "the way there!";
+        document.getElementById("totalLabel3").innerHTML = "Once you achieve this number, your money will work for you.";
+        document.getElementById("totalLabel4").innerHTML = "Meaning that you can live off the returns of your investments for the rest of your life!";
         document.getElementById("lumpSum").innerHTML = numberWithCommas(Math.round(lumpSum));
         document.getElementById("settingsNote").innerHTML = "Play around with the sliders for different outcomes/possibilities";
 
+        document.getElementById("suggestions").innerHTML = "Here are some tips to help you reach your retirement goal: ";
+        document.getElementById("suggestion1").innerHTML = "Investing money early on is crucial for financial growth and longevity.";
+        document.getElementById("suggestion2").innerHTML = "Take advantage of compound interest!";
+        document.getElementById("suggestion5").innerHTML = "Even if you aren't interested in early retirement,";
+        document.getElementById("suggestion6").innerHTML = "financial independence is a great goal to work towards.";
+        document.getElementById("suggestion3").innerHTML = "Budget your money to ensure you are meeting your saving goals.";
+        document.getElementById("suggestion4").innerHTML = "But most importantly build the life you want to retire to!";
 
 
         if (Math.round(yearsTillRetire) <= 0){
@@ -61,12 +77,7 @@ function updateValues(sliderVals){
             document.getElementById("retireAge").innerHTML = retireAge;
             document.getElementById("retireNow").innerHTML = "";
 
-            document.getElementById("suggestions").innerHTML = "Here are some tips to help you reach your retirement goal: ";
-            document.getElementById("suggestion1").innerHTML = "Investing money early on is crucial for financial growth and longevity";
-            document.getElementById("suggestion2").innerHTML = "The first $1,000 you invest will be worth $";
-            document.getElementById("demonstration").innerHTML = numberWithCommas(Math.round(demonstration));
-            document.getElementById("suggestion3").innerHTML = "by the time you retire";
-            document.getElementById("suggestion4").innerHTML = "Take advantage of compound interest!";
+
         }
 
     }
