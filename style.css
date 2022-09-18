@@ -1,8 +1,7 @@
-
-
 body{
     background-color: #031023;
 }
+
 #square1 {
     border: solid 6px #b2d4db;
     width: 0px;
@@ -17,7 +16,7 @@ body{
     height: 0px;
     position: absolute;
     left: 555px;
-    top: 235px;
+    top: 250px;
 }
 
 .labels{
@@ -25,9 +24,7 @@ body{
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
-    
 }
-
 
 #headingLabel1{
     position: absolute;
@@ -85,28 +82,22 @@ body{
     top: 310px;
 }
 
-#raiseLabel{
+#percentLabel{
     position: absolute;
     left: 15px;
     top: 380px;
 }
 
-#percentLabel{
+#spendLabel{
     position: absolute;
     left: 15px;
     top: 450px;
 }
 
-#spendLabel{
-    position: absolute;
-    left: 15px;
-    top: 520px;
-}
-
 #withdrawLabel{
     position: absolute;
     left: 15px;
-    top: 590px;
+    top: 520px;
 }
 
 #totalLabel1{
@@ -121,6 +112,25 @@ body{
     top: 0px;
     font-size: 25px;
 }
+#totalLabel2-1{
+    position: absolute;
+    left: 600px;
+    top: 40px;
+    font-size: 25px;
+}
+#totalLabel2-2{
+    position: absolute;
+    left: 775px;
+    top: 40px;
+    font-size: 25px;
+}
+#totalLabel2-3{
+    position: absolute;
+    left: 700px;
+    top: 40px;
+    font-size: 25px;
+    color: #f2f60b;
+}
 
 #lumpSum{
     position: absolute;
@@ -133,42 +143,49 @@ body{
 #totalLabel3{
     position: absolute;
     left: 600px;
-    top: 45px;
+    top: 85px;
     font-size: 15px;
+    color: #75f60b;
+}
+#totalLabel4{
+    position: absolute;
+    left: 600px;
+    top: 105px;
+    font-size: 15px;
+    color: #75f60b;
 }
 
 #timeRetire1{
     position: absolute;
     left: 600px;
-    top: 80px;
+    top: 120px;
     font-size: 25px;
 }
-
 #timeRetire2{
     position: absolute;
     left: 845px;
-    top: 80px;
+    top: 120px;
     font-size: 25px;
 }
 #timeRetire3{
     position: absolute;
     left: 960px;
-    top: 80px;
-    font-size: 25px;
-    
+    top: 120px;
+    font-size: 25px; 
 }
 
 #yearsTillRetire{
     position: absolute;
     left: 800px;
-    top: 80px;
+    top: 120px;
     font-size: 25px;
     color: #f2f60b;
 }
+
 #monthsTillRetire{
     position: absolute;
     left: 925px;
-    top: 80px;
+    top: 120px;
     font-size: 25px;
     color: #f2f60b;
 }
@@ -176,21 +193,21 @@ body{
 #whenAge{
     position: absolute;
     left: 600px;
-    top: 125px;
+    top: 155px;
     font-size: 25px;
 }
 
 #retireAge{
     position: absolute;
     left: 930px;
-    top: 125px;
+    top: 155px;
     font-size: 25px;
     color: #f2f60b;
 }
 #retireNow{
     position: absolute;
     left: 600px;
-    top: 80px;
+    top: 120px;
     font-size: 25px;
     color: #f2f60b;
 }
@@ -198,7 +215,7 @@ body{
 #settingsNote{
     position: absolute;
     left: 600px;
-    top: 180px;
+    top: 200px;
     font-size: 15px;
     color: #f6750b;
 }
@@ -206,7 +223,7 @@ body{
 #suggestions{
     position: absolute;
     left: 600px;
-    top: 240px;
+    top: 260px;
     font-size: 20px;
     color: #f6750b;
 }
@@ -214,37 +231,47 @@ body{
 #suggestion1{
     position: absolute;
     left: 600px;
-    top: 270px;
+    top: 300px;
     font-size: 20px;
-    color: #0bf6b0;
+    color: #e83a6c;
 }
 #suggestion2{
     position: absolute;
     left: 600px;
-    top: 300px;
+    top: 330px;
     font-size: 20px;
-    color: #0bf6b0;
+    color: #e83a6c;
 }
+
+#suggestion5{
+    position: absolute;
+    left: 600px;
+    top: 365px;
+    font-size: 20px;
+    color: #bb0bf6;
+}
+
+#suggestion6{
+    position: absolute;
+    left: 600px;
+    top: 395px;
+    font-size: 20px;
+    color: #bb0bf6;
+}
+
 #suggestion3{
     position: absolute;
-    left: 1050px;
-    top: 300px;
+    left: 600px;
+    top: 430px;
     font-size: 20px;
     color: #0bf6b0;
 }
 #suggestion4{
     position: absolute;
     left: 600px;
-    top: 330px;
+    top: 460px;
     font-size: 20px;
     color: #0bf6b0;
-}
-#demonstration{
-    position: absolute;
-    left: 995px;
-    top: 300px;
-    font-size: 20px;
-    color: #f2f60b;
 }
 
 .rangeVals{
@@ -254,42 +281,39 @@ body{
 }
 
 .sliders {
-    width: 70%; /* Width of the outside container */
+    width: 70%; 
 }
-  
-/* The slider itself */
 
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 450px; /* Full-width */
-    height: 15px; /* Specified height */
-    outline: none; /* Remove outline */
+    width: 450px; 
+    height: 15px; 
+    outline: none;
     border-radius: 20px;
 
 }
 
-/* Mouse-over effects */
+
 .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: #ffffff; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 15px; 
+    height: 15px; 
+    background: #ffffff; 
+    cursor: pointer; 
     border-radius: 10px;
 }
 
 .slider::-moz-range-thumb {
-    width: 20px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #8b74f2; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 20px; 
+    height: 25px; 
+    background: #8b74f2;
+    cursor: pointer; 
 }
 
 #age{
@@ -329,8 +353,6 @@ body{
     left: 470px;
 }
 
-
-
 #yearly_income{
     background:#cfbb25;
     position: absolute;
@@ -343,53 +365,40 @@ body{
     left: 470px;
 }
 
-#raise{
-    background:#cfbb25;
-    position: absolute;
-    top: 420px;
-    left: 10px;
-}
-
-#out5{
-    position: absolute;
-    top: 420px;
-    left: 470px;
-}
-
 #percent_saved{
     background:#cfbb25;
     position: absolute;
-    top: 490px;
+    top: 420px;
     left: 10px;
 }
 
 #out6{
     position: absolute;
-    top: 490px;
+    top: 420px;
     left: 470px;
 }
 
 #spend{
     background:#28863f;
     position: absolute;
-    top: 560px;
+    top: 490px;
     left: 10px;
 }
 #out7{
     position: absolute;
-    top: 560px;
+    top: 490px;
     left: 470px;
 }
 
 #withdraw_rate{
     background:#28863f;
     position: absolute;
-    top: 630px;
+    top: 560px;
     left: 10px;
 }
 
 #out8{
     position: absolute;
-    top: 630px;
+    top: 560px;
     left: 470px;
 }
